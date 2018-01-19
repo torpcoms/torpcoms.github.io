@@ -1,14 +1,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Hawaii EMA Simulator</title>
+<script type="application/javascript">
+"use strict";
+function send_message(form){
+if(form.mess.value==1){alert("Something happens. We don't know what.");}
+if(form.mess.value==2){alert("Congratulations! You live to work another day!");}
+if(form.mess.value==3){alert("You wish. Time to crack open those IPAWS manuals, call FEMA, and write in your own option, hope they're only a couple hundred pages.");}
+if(form.mess.value==4){alert("Ah! It must be time for the Monthly RMT Test. No? Why did you push it then?");}
+if(form.mess.value==5){alert("Now is the time to panic! Have fun getting reassigned.");}
+return false;
+}</script>
 </head>
 <body>
 <h1>Hawaii EMA Simulator</h1>
 <hr/>
 <h2>Welcome to the Hawaii Emergency Management Agency</h2>
 <p>Voted "a regular PC interface" by Retired Admiral David Simpson, former chief of the FCC’s Public Safety and Homeland Security Bureau. <a href="https://www.wired.com/story/hawaii-nuclear-missile-alert-false-explanation/">src</a></p>
-<form>
-<select>
+<form onsubmit="return send_message(this)">
+<select name="mess">
 <optgroup label="1. State EOC">
 <option value="1">1. TEST Message</option>
 <option value="2">DRILL-PACOM (DEMO) STATE ONLY</option>
